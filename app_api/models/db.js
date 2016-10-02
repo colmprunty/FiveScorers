@@ -1,4 +1,6 @@
 var mongoose = require('mongoose');
 
-var dbURI = 'mongodb://localhost/Loc8r';
+var dbURI = 'mongodb://localhost/FiveScorers';
 mongoose.connect(dbURI);
+
+require('./schemas');
