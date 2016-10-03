@@ -17,5 +17,8 @@ module.exports.choices = function(req, res){
     var data = body;
     res.render('choices', {title: "this is working", choices: data});
   });
+}
 
+module.exports.makeChoice = function(req, res){
+  res.render('makeChoice', { title : "Choose players" });
 }
