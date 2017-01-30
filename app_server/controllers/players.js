@@ -1,7 +1,7 @@
 var request = require('request');
 
 module.exports.playerList = function(req, res){
-  res.render('players', { title : "Just a list of players at the moment", players : ["Aguero", "Zlatan"]});
+  res.render('players', { title : "Just a list of players at the moment", players : ["Aguero", "Zlatan", "Berbatov"]});
 }
 
 module.exports.choices = function(req, res){
@@ -17,8 +17,4 @@ module.exports.choices = function(req, res){
     var data = body;
     res.render('choices', {title: "this is working", choices: data});
   });
-}
-
-module.exports.makeChoice = function(req, res){
-  res.render('makeChoice', { title : "Choose players" });
 }

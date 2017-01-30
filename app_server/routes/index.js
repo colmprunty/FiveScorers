@@ -5,7 +5,8 @@ var ctrlHome = require('../controllers/home')
 
 router.get('/players', ctrlPlayers.playerList);
 router.get('/choices', ctrlPlayers.choices);
-router.get('/makechoice', ctrlPlayers.makeChoice);
 router.get('/', ctrlHome.index);
+
+router.post('/')
 
 module.exports = router;
