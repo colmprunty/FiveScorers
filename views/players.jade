@@ -1,9 +1,9 @@
 extends layout
 
-block content(ng-controller="")
-  h1= title
+block content
+  h1 THIS THING HERE
 
   .row
-      .col-xs-12.col-sm-8(ng-controller="playerListCtrl")  
-        h4 (ng-repeat="player in data.players")
+      .col-xs-12.col-sm-8(ng-controller="playerListCtrl")
+        h4(ng-repeat="player in data.players")
           {{ player.name }}

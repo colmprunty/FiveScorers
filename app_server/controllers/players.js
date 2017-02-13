@@ -1,7 +1,7 @@
 var request = require('request');
 
 module.exports.playerList = function(req, res){
-  res.render('players', { title : "Just a list of players at the moment", players : ["Aguero", "Zlatan", "Berbatov"]});
+  res.render('players');
 }
 
 module.exports.choices = function(req, res){
