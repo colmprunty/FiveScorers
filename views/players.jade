@@ -1,9 +1,12 @@
 extends layout
 
 block content
-  h1 THIS THING HERE
+  h1 Choose Players
 
   .row
-      .col-xs-12.col-sm-8(ng-controller="playerListCtrl")
-        h4(ng-repeat="player in data.players")
-          {{ player.name }}
+    .col-xs-12.col-md-6
+      form.form-horizontal(action="", method="post", role="form")
+        .form-group
+            label.col-xs-10.col-sm-2.control-label(for="name") Name
+            .col-xs-12.col-sm-10
+              input#name.form-control(name="name")

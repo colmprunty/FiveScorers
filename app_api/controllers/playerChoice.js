@@ -6,21 +6,17 @@ module.exports.getPlayerChoices = function(req, res){
     exec(function(err, playerChoice){
       sendJsonResponse(res, 200, playerChoice);
     });
-}
-
-var choosePlayer = function(req, res){
-
-}
+};
 
 module.exports.choosePlayer = function(req, res){
   Choice.create({
     name: req.params.playerName
   },
-  function(err, location){
+  function(err, player){
     if(err){
       sendJsonResponse(res, 400, err);
     } else {
-      sendJsonResponse(res, 201, location);
+      sendJsonResponse(res, 201, player);
     }
   });
 };
