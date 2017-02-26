@@ -10,7 +10,7 @@ module.exports.getPlayerChoices = function(req, res){
 
 module.exports.choosePlayer = function(req, res){
   Choice.create({
-    name: req.params.playerName
+    name: req.body.playerName
   },
   function(err, player){
     if(err){
