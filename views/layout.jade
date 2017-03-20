@@ -4,8 +4,11 @@ html(ng-app='FiveScorersApp')
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
-
+  
+    .container
+      div(ng-view)
+        block content
+        
     script(src='/angular/angular.min.js')
     script(src='/app.js')
     script(src='/lib/angular-route.min.js')
