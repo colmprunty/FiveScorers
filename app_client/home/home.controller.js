@@ -6,7 +6,7 @@
     function homeCtrl (){
       var vm = this;
       vm.pageHeader = {
-        title: "Some number of scorers"
+        title: "Some number of scorers from home.controller.js"
       };
     }
   })();
