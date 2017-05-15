@@ -14,6 +14,8 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+
+
 var appClientFiles = [
   'app_client/app.js',
   'app_client/home/home.controller.js'
