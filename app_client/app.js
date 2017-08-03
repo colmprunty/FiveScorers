@@ -5,20 +5,23 @@
   function config ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl:"./home/home.view.html",
+        templateUrl:"/home/home.view.html",
         controller: "homeCtrl",
         controllerAs: "vm"
       })
       .when('/players', {
-        templateUrl: './common/views/choosePlayers.view.html',
+        templateUrl: '/common/views/choosePlayers.view.html',
         controller: 'playerChoiceCtrl',
         controllerAs: 'vm'
       })
       .otherwise({redirectTo: '/'});
+
+    // use the HTML5 History API
+    $locationProvider.html5Mode(true);
   }
 
   angular
     .module('FiveScorersApp')
-    .config(['$routeProvider', config]);
+    .config(['$routeProvider', '$locationProvider', config]);
 
 })();
