@@ -10,7 +10,7 @@
         controllerAs: "vm"
       })
       .when('/players', {
-        templateUrl: '/common/views/choosePlayers.view.html',
+        templateUrl: '/choosePlayers/choosePlayers.view.html',
         controller: 'playerChoiceCtrl',
         controllerAs: 'vm'
       })

@@ -1,5 +1,7 @@
 <div id="choosePlayers">
+  {{ vm.pageHeader.title }}
   <form id="makeChoice" name="makeChoice" role="form" ng-submit="vm.onSubmit()">
     <input id="player" name="player" ng-model="vm.formData.playerName" />
+    <button type="submit">Submit</button>
   </form>
 </div
