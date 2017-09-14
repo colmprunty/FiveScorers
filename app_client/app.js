@@ -11,7 +11,7 @@
       })
       .when('/players', {
         templateUrl: '/choosePlayers/choosePlayers.view.html',
-        controller: 'playerChoiceCtrl',
+        controller: 'choosePlayersCtrl',
         controllerAs: 'vm'
       })
       .otherwise({redirectTo: '/'});

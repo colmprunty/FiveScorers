@@ -1,19 +1,18 @@
 (function(){
-
   angular
     .module('FiveScorersApp')
-    .controller('choosePlayersCtrl' choosePlayersCtrl);
+    .controller('choosePlayersCtrl', choosePlayersCtrl);
 
     function choosePlayersCtrl(){
       var vm = this;
       vm.pageHeader = {
-        title: "This is from the player choice controller"
+        title: "This is really from the player choice controller"
       };
+
       vm.onSubmit = function(){
         var name = vm.formData.playerName;
-        vm.pageHeader = {
-          title: name
-        };
+        alert('submitted ' + name);
+        return true;
       };
     }
 })();

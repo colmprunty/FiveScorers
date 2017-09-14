@@ -17,7 +17,7 @@ app.set('view engine', 'jade');
 var appClientFiles = [
   'app_client/app.js',
   'app_client/home/home.controller.js',
-  'app_client/playerChoice/playerChoice.controller.js'
+  'app_client/choosePlayers/choosePlayers.controller.js'
 ];
 
 var uglified = uglifyJs.minify(appClientFiles, { compress: false});
