@@ -11,8 +11,8 @@
       };
 
       vm.onSubmit = function(){
-        var name = vm.formData.playerName;
-        scorerData.addChoice();
+        var playerName = vm.formData.playerName;
+        scorerData.addChoice(playerName);
         return true;
       };
     }
