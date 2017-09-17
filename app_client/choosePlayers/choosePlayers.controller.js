@@ -7,7 +7,7 @@
     function choosePlayersCtrl(scorerData){
       var vm = this;
       vm.pageHeader = {
-        title: "This is really from the player choice controller"
+        title: "Choose your player from the box below"
       };
 
       vm.onSubmit = function(){

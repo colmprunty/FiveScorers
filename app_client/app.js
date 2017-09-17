@@ -14,6 +14,11 @@
         controller: 'choosePlayersCtrl',
         controllerAs: 'vm'
       })
+      .when('/choices', {
+        templateUrl: '/choices/choices.view.html',
+        controller: 'choicesCtrl',
+        controllerAs: 'vm'
+      })
       .otherwise({redirectTo: '/'});
 
     $locationProvider.html5Mode(true);

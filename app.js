@@ -18,7 +18,8 @@ var appClientFiles = [
   'app_client/app.js',
   'app_client/home/home.controller.js',
   'app_client/common/services/scorerData.service.js',
-  'app_client/choosePlayers/choosePlayers.controller.js'
+  'app_client/choosePlayers/choosePlayers.controller.js',
+  'app_client/choices/choices.controller.js'  
 ];
 
 var uglified = uglifyJs.minify(appClientFiles, { compress: false});
