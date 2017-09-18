@@ -12,8 +12,13 @@
             return $http.post('/api/playerChoice', data);
         };
 
+        var getChoices = function(){
+            return $http.get('/api/choices');
+        };
+
         return {
-            addChoice : addChoice
+            addChoice : addChoice,
+            getChoices : getChoices
         };
     }
 })();

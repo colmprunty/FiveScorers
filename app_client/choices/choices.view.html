@@ -1,4 +1,8 @@
 <div id='choices'>
-    {{ vm.pageHeader.title }}
-    Choices go here
+    <h1>{{ vm.pageHeader.title }}</h1>
+    <ul>
+        <li ng-repeat=" choice in vm.choices" >
+            {{ choice.name }}
+        </li>
+        </ul>
 </div>
