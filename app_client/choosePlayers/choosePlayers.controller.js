@@ -28,9 +28,9 @@
         var lowercaseQuery = angular.lowercase(query);
   
         return function filterFn(player) {
-          return (player.value.indexOf(lowercaseQuery) === 0);
+          console.log("player is " + player.name);
+          return (player.name.indexOf(lowercaseQuery) === 0);
         };
-  
       }
     }
 })();
