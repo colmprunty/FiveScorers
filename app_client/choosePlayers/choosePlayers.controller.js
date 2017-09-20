@@ -15,5 +15,22 @@
         scorerData.addChoice(playerName);
         return true;
       };
+
+      vm.allPlayers = [{"name": "shearer", "name" : "cantona"}];
+      vm.querySearch = querySearch;
+
+      function querySearch(query){
+        return vm.allPlayers.filter(createFilterFor(query))
+      };
+
+      function createFilterFor(query) {
+        console.log(query);
+        var lowercaseQuery = angular.lowercase(query);
+  
+        return function filterFn(player) {
+          return (player.value.indexOf(lowercaseQuery) === 0);
+        };
+  
+      }
     }
 })();

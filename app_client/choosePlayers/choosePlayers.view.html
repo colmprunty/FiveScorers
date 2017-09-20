@@ -1,7 +1,11 @@
 <div id="choosePlayers">
   {{ vm.pageHeader.title }}
   <form id="makeChoice" name="makeChoice" role="form" ng-submit="vm.onSubmit()">
-    <input id="player" name="player" ng-model="vm.formData.playerName" />
+    <!-- <input id="player" name="player" ng-model="vm.formData.playerName" /> -->
+    <md-autocomplete md-selected-item="selectedItem" md-search-text="vm.searchText" md-items="item in vm.querySearch(vm.searchText)" 
+                      md-item-text="item.display" ng-model="vm.formData.playerName">
+      <span md-highlight-text="searchText">{{item.display}}</span>
+    </md-autocomplete>
     <button type="submit">Submit</button>
   </form>
-</div
+</div>
