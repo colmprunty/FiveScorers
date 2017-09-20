@@ -1,6 +1,6 @@
 (function () {
 
-  angular.module('FiveScorersApp', ['ngRoute']);
+  angular.module('FiveScorersApp', ['ngRoute', 'ngMaterial']);
 
   function config ($routeProvider, $locationProvider) {
     $routeProvider
