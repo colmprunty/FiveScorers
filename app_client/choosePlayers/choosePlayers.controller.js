@@ -16,7 +16,7 @@
         return true;
       };
 
-      vm.allPlayers = [{"name": "shearer", "name" : "cantona"}];
+      vm.allPlayers = [{"name": "shearer"}, {"name" : "cantona"}];
       vm.querySearch = querySearch;
 
       function querySearch(query){
@@ -24,11 +24,9 @@
       };
 
       function createFilterFor(query) {
-        console.log(query);
         var lowercaseQuery = angular.lowercase(query);
   
         return function filterFn(player) {
-          console.log("player is " + player.name);
           return (player.name.indexOf(lowercaseQuery) === 0);
         };
       }
