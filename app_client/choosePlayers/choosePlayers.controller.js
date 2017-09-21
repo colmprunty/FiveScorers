@@ -7,17 +7,21 @@
     function choosePlayersCtrl(scorerData){
       var vm = this;
       vm.pageHeader = {
-        title: "Choose your player from the box below"
+        title: ""
       };
 
       vm.onSubmit = function(){
-        var playerName = vm.formData.playerName;
-        scorerData.addChoice(playerName);
+        scorerData.addChoice(vm.selectedItem.name);
         return true;
       };
 
       vm.allPlayers = [{"name": "shearer"}, {"name" : "cantona"}];
       vm.querySearch = querySearch;
+      vm.selectedItemChange = selectedItemChange;
+
+      function selectedItemChange(item) {
+        vm.selectedItem = JSON.stringify(item);
+      }
 
       function querySearch(query){
         return vm.allPlayers.filter(createFilterFor(query))
