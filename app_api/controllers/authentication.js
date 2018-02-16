@@ -36,5 +36,28 @@ module.exports.register = function(req, res){
 };
 
 module.exports.login = function(req, res){
-  
-}
+  if(!req.body.email || !req.body.password){
+    sendJSONResponse(res, 400, {
+      "message" : "All fields required"
+    });
+    return;
+  }
+
+  passport.authenticate('local', function(err, user, info){
+    var token;
+
+    if(err){
+      sendJSONResponse(res, 404, err);
+      return;
+    }
+
+    if(user){
+      token = user.generateJwt();
+      sendJSONResponse(res, 200, {
+        "token" : token
+      });
+    } else {
+      sendJSONResponse(res, 401, info);
+    }
+  })(req, res);
+};
