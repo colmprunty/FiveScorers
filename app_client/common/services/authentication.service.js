@@ -3,8 +3,8 @@
         .module('FiveScorersApp')
         .service('authentication', authentication);
 
-    authentication.$inject = ['$window'];
-    function authentication($window){
+    authentication.$inject = ['$http','$window'];
+    function authentication($http,$window){
         var saveToken = function(token){
             $window.localStorage['fiveScorersToken'] = token;
         };
@@ -14,13 +14,13 @@
         };
 
         register = function(user){
-            return $http.post('/api/register', user).success(function(data){
+            return $http.post('/api/register', user).then(function(data){
                 saveToken(data.token);
             });
         };
 
         login = function(user){
-            return $http.post('/api/login', user).success(function(data){
+            return $http.post('/api/login', user).then(function(data){
                 saveToken(data.token);
             });
         };
