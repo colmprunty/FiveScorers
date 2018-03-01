@@ -26,6 +26,7 @@ var appClientFiles = [
   'app_client/common/services/authentication.service.js',
   'app_client/choosePlayers/choosePlayers.controller.js',
   'app_client/auth/register/register.controller.js',
+  'app_client/auth/login/login.controller.js',
   'app_client/choices/choices.controller.js'
 ];
 
