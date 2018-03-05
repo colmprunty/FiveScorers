@@ -28,7 +28,6 @@ module.exports.register = function(req, res){
       sendJSONResponse(res, 404, err)
     } else {
       token = user.generateJwt();
-      console.log(token);
       sendJSONResponse(res, 200, {
         "token": token
       });

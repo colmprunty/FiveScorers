@@ -13,15 +13,15 @@
             return $window.localStorage['fiveScorersToken'];
         };
 
-        var register = function(user){
-            return $http.post('/api/register', user).then(function(data){
-                saveToken(data.token);
+        register = function(user){
+            return $http.post('/api/register', user).then(function(result){
+                saveToken(result.data.token);
             });
         };
 
-        var login = function(user){
-            return $http.post('/api/login', user).then(function(data){
-                saveToken(data.token);
+        login = function(user){
+            return $http.post('/api/login', user).then(function(result){
+                saveToken(result.data.token);
             });
         };
 
