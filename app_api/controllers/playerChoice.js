@@ -17,7 +17,7 @@ var getUser = function(req, res, callback){
           sendJsonResponse(res, 404, err);
           return;
         }
-        callback(req, res, user.name);
+        callback(req, res, user.email);
       });
   } else {
     sendJsonResponse(res, 404, {
@@ -35,10 +35,11 @@ module.exports.getPlayerChoices = function(req, res){
 };
 
 module.exports.choosePlayer = function(req, res){
-  getUser(req, res, function(req, res, userName){
+  getUser(req, res, function(req, res, email){
     Choice.create({
       name: req.body.playerName,
-      userName: userName
+      email: email,
+      date: Date.now()
     },
     function(err, player){
       if(err){
